@@ -356,26 +356,3 @@ div.mail_title {
 .mail_info .mi_chk {
     width:30px;
 }
-
-.mail_list_content {
-    padding: 0 !important;
-    min-width: auto !important;
-}
-
-.mail_list_content > li {
-    min-height: initial !important;
-    padding-left: 105px !important;
-    padding-right: 100px !important;
-}
-
-div.mail_title {
-    padding-left: 80px !important;
-}
-
-.subject_link {
-    max-width: none !important;
-}
-
-.name_wd {
-    width: 93px !important;
-}
