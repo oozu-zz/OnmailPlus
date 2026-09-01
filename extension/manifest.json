@@ -4,6 +4,15 @@
   "version": "1.0.0",
   "description": "온메일의 화면 구성과 키보드 사용성을 개선합니다.",
   "minimum_chrome_version": "102",
+  "icons": {
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "온메일플러스",
+    "default_icon": {
+      "128": "icon128.png"
+    }
+  },
   "host_permissions": [
     "http://www.onmail.go.kr/*",
     "https://www.onmail.go.kr/*",
