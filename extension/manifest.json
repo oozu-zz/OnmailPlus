@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "온메일플러스",
+  "version": "1.0.0",
+  "description": "온메일의 화면 구성과 키보드 사용성을 개선합니다.",
+  "minimum_chrome_version": "102",
+  "host_permissions": [
+    "http://www.onmail.go.kr/*",
+    "https://www.onmail.go.kr/*",
+    "http://onmail.go.kr/*",
+    "https://onmail.go.kr/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.onmail.go.kr/*",
+        "https://www.onmail.go.kr/*",
+        "http://onmail.go.kr/*",
+        "https://onmail.go.kr/*"
+      ],
+      "css": ["style.css"],
+      "js": ["integration.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/maillist.ds*",
+        "https://www.onmail.go.kr/maillist.ds*",
+        "http://onmail.go.kr/maillist.ds*",
+        "https://onmail.go.kr/maillist.ds*"
+      ],
+      "js": ["key-navigation.js", "resizer.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/mailwrite*",
+        "https://www.onmail.go.kr/mailwrite*",
+        "http://onmail.go.kr/mailwrite*",
+        "https://onmail.go.kr/mailwrite*"
+      ],
+      "js": ["compose.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/mailread.ds*",
+        "https://www.onmail.go.kr/mailread.ds*",
+        "http://onmail.go.kr/mailread.ds*",
+        "https://onmail.go.kr/mailread.ds*"
+      ],
+      "js": ["reader.js"],
+      "run_at": "document_end",
+      "world": "MAIN"
+    }
+  ]
+}

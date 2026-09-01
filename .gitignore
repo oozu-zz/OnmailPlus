@@ -1,0 +1,5 @@
+*.options.json
+*.storage.json
+
+# ZIP은 확장 폴더에서 다시 만들 수 있는 빌드 산출물입니다.
+온메일플러스-*.zip

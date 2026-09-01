@@ -1,0 +1,378 @@
+/* ==UserStyle==
+@name         OnmailPlus
+@namespace    https://www.onmail.go.kr/
+@version      2026-09-01
+@description  온메일 화면 레이아웃과 가독성 보정
+==/UserStyle== */
+
+@-moz-document domain("onmail.go.kr") {
+/* 공통 스타일 */
+body, h1, h2, h3, h4, th, td, input, select, textarea, button {
+    font-size: 12px;
+}
+
+/* 왼쪽메뉴 최소높이 초기화 */
+#leftMenuDiv_Child {
+    min-height: initial !important;
+}
+
+.mail_list_content {
+    padding: 0;
+}
+
+/*메일보기 너비교정*/
+.view_contnet,
+.view_info {
+    min-width: initial !important;
+}
+
+.mail_title_new ul {
+    padding-top: 0;
+}
+
+/*메일 타이틀 위치수정 */
+.mail_title_new [class^="mi_"] {
+    height: auto;
+}
+
+/* footer 없애기 */
+.gm_footer {
+    display: none;
+}
+.gm_cont_wrap.footeron {
+    bottom:0;
+}
+
+/* 온메일탑 정리 */
+.gm_header, .gm_header h1,
+a.logops,.gm_header_area {
+    height: 50px !important;
+}
+
+a.logops {
+    line-height:4;
+}
+
+.gm_container {
+    top: 50px;
+}
+
+.gm_header.headerblue .mail_ac_wk {
+    height:25px;
+}
+/* 메일 읽기 화면의 받는사람 영역 */
+/* 받은사람 높이줄이기 */
+.view_info.short {
+    max-height: 90px;
+    overflow: hidden;
+}
+
+.view_info.short::before {
+    content: '단축키 space';
+    display: block;
+    font-weight: 800;
+    color: red;
+    line-height: 1;
+    text-align: right;
+}
+
+/*온메일 받은 편지함*/
+.mail_list_content > li {
+    min-height: initial;
+    padding-left:105px;
+    padding-right:100px;
+}
+
+.ip_chk {
+    margin-top: 6px;
+}
+    
+.icon_important {
+    margin-top: 9px !important;
+}
+    
+a,
+dd {
+    font-size: 13px !important;
+}
+
+/* 보낸 사람 받은 사람 */
+div.view_info > dl:nth-child(2) > dd {
+    margin-top: 0;
+}
+
+.send_person_list dt {
+    min-width:40px;
+}
+
+.send_person_list:nth-of-type(3) {
+    margin-top:0px;
+}
+
+.send_person_list:nth-of-type(3) dt,
+.send_person_list:nth-of-type(3) dd:nth-of-type(1),
+.send_person_list:nth-of-type(3) dd:nth-of-type(2),
+.send_person_list:nth-of-type(3) dd:nth-of-type(3){
+    margin-top:0px;
+}
+
+/* 본문 여백 */
+.view_contnet {
+    padding: 5px 15px;
+}
+
+.view_info {
+    padding: 5px 15px;
+}
+
+/* 본문 제목위 마진 제거 */
+.view_subject {
+    margin-top:0px;
+    margin-right:0px;
+}
+
+/* 제목정리 */
+.subject_link > a {
+    max-width: 91%;
+/*     display: inline-block; */
+}
+
+/* 제목링크 최대 너비 없애기 */
+.subject_link {
+    max-width:none;
+    vertical-align: bottom;
+}
+
+/*제목 정보 레이아웃 정리 */
+.view_subject {
+    display:flex;
+}
+/* 제목내 날짜정보 */
+.send_date {
+    margin-left: auto;
+    display:inline-block;
+    padding-left:0 !important;
+    width:66px;
+}
+
+
+/* 가로분할 */
+.list_vertical .gm_div_list {
+    top:25px !important;
+}
+
+.mail_title_new {
+    height:24px;
+}
+
+/* 노랑공지 글자여백 */
+#rntcNoticeMessage {
+    padding-left:10px !important;
+    padding-right:10px;
+    height:20px !important;
+}
+
+/* 86~95연동 */
+/* 85 타이틀 여백 수정 */
+div.mail_title {
+  padding-left: 80px;
+}
+
+/*89 이름 없애기 */
+.name_wd {
+    max-width:none !important;
+    width:93px;
+}
+
+/* 목록 스크롤바 처리 */
+.gm_list_wrap.listtop {
+    top:25px !important;
+    overflow-y:auto !important;
+}
+
+/* vertical은 top을 다르게 지정 */
+.list_vertical .gm_list_wrap.listtop {
+    top:0px !important;
+}
+
+/* 메일쓰기버튼 원복 */
+.write_txt {
+    font-size:16px;
+}
+
+/* 읽기 중요 아이콘, 체크버튼 */
+.icon_read.on
+,.icon_read.off
+,.mail_info .ip_chk
+,.mail_info .icon_read_reply.on
+,.mail_info .icon_read_delivery.on
+,.mail_info .icon_read_replydelivery.on
+,.mail_info .icon_read_replydelivery.off {
+    margin-top:7px !important;
+}
+
+.icon_important.on
+,.icon_important.off {
+    margin-top:8.5px !important;
+}
+
+/* 날짜 */
+.mi_date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 첨부파일 */
+.mail_info .mi_file {
+    text-align:left;
+}
+
+
+.icon_file {
+    margin-top:9px !important;
+}
+
+/* 헤더를 가장 위로 */
+.mail_title_new {
+    z-index:999 !important;
+}
+
+/* 팝업 수정 */
+.mail_info .mi_link4 {
+    display:none !important;
+    width:125px;
+}
+.bqX {
+    margin:0px 3px;
+}
+
+.view_info {
+    max-height:89px;
+    overflow:hidden;
+/*     overflow-y:scroll; */
+}
+
+.view_info.expand {
+    max-height:none;
+    overflow:auto;
+}
+
+.view_info::before {
+    content:'받는사람 더보기:space';
+    color:lightgrey;
+    font-size:10px;
+    font-weight:800;
+    position:absolute;
+    float:right;
+    right:10px;
+    top:-2px;
+}
+
+.mail_title.t_icon {
+    padding-right:0px !important;
+}
+
+/* 받는사람 목록 마지막줄이 벌어지는 문제 해결 */
+.view_info #dl_close_to .send_info_view .icon_arr {
+    margin-top: 0;
+}
+
+/* 받는사람 닫힌상태 마지막줄 벌어짐해결*/
+.view_info .send_info_view .icon_arr.off {
+    margin-top: 0;
+}
+
+/* 본문제목 텍스트 ... 조합 */
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 수신확인 레이아웃 손질 */
+.p_nm.p_ms.mi_name,
+.p_ms.mi_subject,
+.mi_date.p_ms,
+.history_title_list > .p_ms.mi_su_01,
+.history_title_list > .p_ms.mi_su_02,
+.history_title_list > .p_ms.mi_su_03{
+    padding-top: 0 !important;
+}
+
+/* 수신확인 레이아웃 발송취소 손질 */
+.mi_send_cancel.p_ms {
+    padding-top: 0 !important;
+    line-height:30px;
+}
+
+/*메일목록함 레이아웃정리 : 최소너비 삭제*/
+.mail_list_content {
+    min-width:auto;
+}
+
+/* 세로분할 리스트 제목 여백줄이기 */
+.list_horizontal .gm_list_wrap.listtop {
+    top:25px !important;
+}
+
+/* list_horizontal 메일목록함 받은날짜 레이아웃 정리 */
+.list_horizontal .mail_info .mi_date {
+    right:0px;
+}
+
+.list_horizontal .gm_div_list {
+    width: 50%;
+}
+
+/* 첨부파일 카운터 */
+.attach_tb {
+    counter-reset: file;
+}
+
+.down_file {
+    counter-increment: file;
+}
+
+.down_file::before {
+    content: counter(file)".";
+}
+
+/* 발송취소 */
+.mi_send_cancel a {
+    line-height:11px;
+}
+
+/* 메일아이콘 좁히기 */
+.mail_info .icon_file.big {
+    background-position: -120px -81px;
+}
+.icon_file {
+    background-position: -136px -81px;
+}
+.mail_info .icon_file {
+	width:9px;
+}
+
+/* 읽지 않은 메일 색 */
+.mail_list_content .mail_not_read .name_wd a, .mail_list_content .mail_not_read .subject_link {
+    color:black;
+}
+
+/* 리스트체크박스 */
+.mail_title_new .mi_chk .ip_chk {
+    margin-left:0px;
+}
+
+/* 타이틀체크박스 */
+.mail_title_new .mi_chk {
+    width:36px;
+}
+.mail_info .mi_chk .ip_chk {
+    margin-left:10px;
+}
+
+.mail_info .mi_chk {
+    width:30px;
+}
+}
