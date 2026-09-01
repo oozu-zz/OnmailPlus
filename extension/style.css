@@ -178,13 +178,7 @@ div.mail_title {
 
 /* 목록 스크롤바 처리 */
 .gm_list_wrap.listtop {
-    top:25px !important;
     overflow-y:auto !important;
-}
-
-/* vertical은 top을 다르게 지정 */
-.list_vertical .gm_list_wrap.listtop {
-    top:0px !important;
 }
 
 /* 메일쓰기버튼 원복 */
@@ -301,11 +295,6 @@ div.mail_title {
 /*메일목록함 레이아웃정리 : 최소너비 삭제*/
 .mail_list_content {
     min-width:auto;
-}
-
-/* 세로분할 리스트 제목 여백줄이기 */
-.list_horizontal .gm_list_wrap.listtop {
-    top:25px !important;
 }
 
 /* list_horizontal 메일목록함 받은날짜 레이아웃 정리 */
