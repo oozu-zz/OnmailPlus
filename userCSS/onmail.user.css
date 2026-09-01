@@ -354,6 +354,12 @@ div.mail_title {
 	width:9px;
 }
 
+.mail_info .icon_tag {
+    margin-top: 9px;
+    width: 5px;
+    background-position: -126px -254px;
+}
+
 /* 읽지 않은 메일 색 */
 .mail_list_content .mail_not_read .name_wd a, .mail_list_content .mail_not_read .subject_link {
     color:black;
