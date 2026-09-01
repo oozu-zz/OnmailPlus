@@ -367,3 +367,77 @@ div.mail_title {
 .mail_info .mi_chk {
     width:30px;
 }
+
+/*
+ * 확장 CSS는 사이트 CSS와 같은 author 레벨로 주입되므로, 원본 usercss의
+ * 핵심 레이아웃 보정이 사이트 기본 규칙에 덮이지 않도록 우선순위를 보강합니다.
+ * 리사이저가 인라인으로 바꾸는 분할 폭/높이는 의도적으로 제외합니다.
+ */
+body,
+h1,
+h2,
+h3,
+h4,
+th,
+td,
+input,
+select,
+textarea,
+button {
+    font-size: 12px !important;
+}
+
+.mail_list_content {
+    padding: 0 !important;
+    min-width: auto !important;
+}
+
+.mail_list_content > li {
+    min-height: initial !important;
+    padding-left: 105px !important;
+    padding-right: 100px !important;
+}
+
+.gm_container {
+    top: 50px !important;
+}
+
+.mail_title_new ul,
+.view_contnet,
+.view_info {
+    padding-top: 0 !important;
+}
+
+.view_contnet,
+.view_info {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.view_subject {
+    display: flex !important;
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+}
+
+div.mail_title {
+    padding-left: 80px !important;
+}
+
+.subject_link {
+    max-width: none !important;
+}
+
+.name_wd {
+    width: 93px !important;
+}
+
+.view_info {
+    max-height: 89px !important;
+    overflow: hidden !important;
+}
+
+.view_info.expand {
+    max-height: none !important;
+    overflow: auto !important;
+}
