@@ -18,7 +18,16 @@
         "http://onmail.go.kr/*",
         "https://onmail.go.kr/*"
       ],
-      "css": ["style.css"],
+      "js": ["style-loader.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/*",
+        "https://www.onmail.go.kr/*",
+        "http://onmail.go.kr/*",
+        "https://onmail.go.kr/*"
+      ],
       "js": ["integration.js"],
       "run_at": "document_end",
       "world": "MAIN"
