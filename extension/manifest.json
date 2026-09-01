@@ -10,6 +10,17 @@
     "http://onmail.go.kr/*",
     "https://onmail.go.kr/*"
   ],
+  "web_accessible_resources": [
+    {
+      "resources": ["style.css"],
+      "matches": [
+        "http://www.onmail.go.kr/*",
+        "https://www.onmail.go.kr/*",
+        "http://onmail.go.kr/*",
+        "https://onmail.go.kr/*"
+      ]
+    }
+  ],
   "content_scripts": [
     {
       "matches": [

@@ -6,24 +6,13 @@
     return;
   }
 
-  fetch(chrome.runtime.getURL('style.css'))
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`CSS load failed: ${response.status}`);
-      }
-      return response.text();
-    })
-    .then((css) => {
-      if (document.getElementById(STYLE_ID)) {
-        return;
-      }
+  const stylesheet = document.createElement('link');
+  stylesheet.id = STYLE_ID;
+  stylesheet.rel = 'stylesheet';
+  stylesheet.href = chrome.runtime.getURL('style.css');
+  stylesheet.addEventListener('error', () => {
+    console.warn('[온메일플러스] CSS를 불러오지 못했습니다.');
+  });
 
-      const style = document.createElement('style');
-      style.id = STYLE_ID;
-      style.textContent = css;
-      (document.head || document.documentElement).appendChild(style);
-    })
-    .catch((error) => {
-      console.warn('[온메일플러스] CSS를 불러오지 못했습니다.', error);
-    });
+  (document.head || document.documentElement).appendChild(stylesheet);
 })();
