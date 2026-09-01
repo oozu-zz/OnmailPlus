@@ -178,7 +178,12 @@ div.mail_title {
 
 /* 목록 스크롤바 처리 */
 .gm_list_wrap.listtop {
+    top:25px !important;
     overflow-y:auto !important;
+}
+
+.list_vertical .gm_list_wrap.listtop {
+    top:0px !important;
 }
 
 /* 메일쓰기버튼 원복 */
@@ -298,6 +303,10 @@ div.mail_title {
 }
 
 /* list_horizontal 메일목록함 받은날짜 레이아웃 정리 */
+.list_horizontal .gm_list_wrap.listtop {
+    top:25px !important;
+}
+
 .list_horizontal .mail_info .mi_date {
     right:0px;
 }
