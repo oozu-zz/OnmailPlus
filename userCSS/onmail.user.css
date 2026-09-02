@@ -121,10 +121,6 @@ div.view_info > dl:nth-child(2) > dd {
     padding: 5px 15px;
 }
 
-.view_info {
-    padding: 5px 15px;
-}
-
 /* 본문 제목위 마진 제거 */
 .view_subject {
     margin-top:0px;
@@ -248,10 +244,27 @@ div.mail_title {
 }
 
 .view_info {
-    max-height:89px;
+    position: relative;
+    box-shadow: none;
+    padding: 5px 15px;
+    max-height:93px;
     overflow:hidden;
-    box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.5);
 /*     overflow-y:scroll; */
+}
+
+.view_info:not(.expand)::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 18px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        rgba(255, 255, 255, 0.95)
+    );
+    pointer-events: none;
 }
 
 .view_info.expand {
