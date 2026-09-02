@@ -248,6 +248,7 @@ div.mail_title {
 .view_info.expand {
     max-height:none;
     overflow:auto;
+    box-shadow: initial;
 }
 
 .view_info::before {
