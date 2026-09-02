@@ -241,6 +241,7 @@ div.mail_title {
 .view_info {
     max-height:89px;
     overflow:hidden;
+    box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.9);
 /*     overflow-y:scroll; */
 }
 
