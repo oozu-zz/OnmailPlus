@@ -397,3 +397,9 @@ div.mail_title {
     width:30px;
 }
 }
+
+@-moz-document url-prefix("https://www.onmail.go.kr/historySent.ds") {
+    .gm_div_list .gm_list_wrap {
+        top: 24px !important;
+    }
+}

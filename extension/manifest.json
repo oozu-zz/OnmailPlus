@@ -84,6 +84,16 @@
       "js": ["reader.js"],
       "run_at": "document_end",
       "world": "MAIN"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/historySent.ds*",
+        "https://www.onmail.go.kr/historySent.ds*",
+        "http://onmail.go.kr/historySent.ds*",
+        "https://onmail.go.kr/historySent.ds*"
+      ],
+      "css": ["history-sent.css"],
+      "run_at": "document_end"
     }
   ]
 }
