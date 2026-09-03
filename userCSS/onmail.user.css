@@ -318,7 +318,7 @@ div.mail_title {
 /* 수신확인 레이아웃 발송취소 손질 */
 .mi_send_cancel.p_ms {
     padding-top: 0 !important;
-    line-height:30px;
+    line-height: 16px;
 }
 
 /*메일목록함 레이아웃정리 : 최소너비 삭제*/

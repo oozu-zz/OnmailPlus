@@ -94,6 +94,14 @@
       ],
       "css": ["history-sent.css"],
       "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.onmail.go.kr/js/lib/smartEditor/smart_editor2_inputarea.html*"
+      ],
+      "js": ["editor-caret.js"],
+      "run_at": "document_end",
+      "all_frames": true
     }
   ]
 }
