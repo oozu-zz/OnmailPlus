@@ -120,12 +120,6 @@
     applyLineHeight();
     shortcut('alt+shift+z', cycleLineHeight);
 
-    const params = new URLSearchParams(location.search);
-    const mailboxIndex = Number.parseInt(params.get('mboxIdx') || '', 10);
-    if (!Number.isInteger(mailboxIndex) || mailboxIndex < 0) {
-      return;
-    }
-
     const replyButton = document.querySelector('#button_set > div.di_if > button:nth-child(1)');
     const forwardButton = document.querySelector('#forwardBtn');
     const removeButton = document.querySelector('#removeButton');
