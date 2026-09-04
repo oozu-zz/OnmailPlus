@@ -21,5 +21,9 @@
     selection.addRange(range);
   }
 
-  moveCaretToStart(document.body);
+
+  const el = document.body;
+  [10, 50, 100].forEach((ms) => {
+    setTimeout(() => moveCaretToStart(el), ms);
+  });
 })();

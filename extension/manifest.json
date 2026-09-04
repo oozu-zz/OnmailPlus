@@ -38,6 +38,16 @@
         "http://onmail.go.kr/*",
         "https://onmail.go.kr/*"
       ],
+      "js": ["site-favicon.js"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "http://www.onmail.go.kr/*",
+        "https://www.onmail.go.kr/*",
+        "http://onmail.go.kr/*",
+        "https://onmail.go.kr/*"
+      ],
       "js": ["style-loader.js"],
       "run_at": "document_end"
     },
@@ -97,6 +107,9 @@
     },
     {
       "matches": [
+        "http://onmail.go.kr/js/lib/smartEditor/smart_editor2_inputarea.html*",
+        "https://onmail.go.kr/js/lib/smartEditor/smart_editor2_inputarea.html*",
+        "http://www.onmail.go.kr/js/lib/smartEditor/smart_editor2_inputarea.html*",
         "https://www.onmail.go.kr/js/lib/smartEditor/smart_editor2_inputarea.html*"
       ],
       "js": ["editor-caret.js"],
